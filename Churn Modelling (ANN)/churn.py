@@ -55,6 +55,11 @@ ann.add(tf.keras.layers.Dense(units = 6,activation = 'relu'))
 ann.add(tf.keras.layers.Dense(units = 1,activation = 'sigmoid'))
 
 
+# Training The ANN
+
+# Compiling the ann
+
+
 
 
 
