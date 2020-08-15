@@ -31,6 +31,30 @@ X = np.array(ct.fit_transform(X))
 # print(X)
 
 # Splitting the dataset into Training Set and Test Set
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+
+# Building the ANN
+# Initializing the ANN
+
+ann = tf.keras.models.Sequential()
+
+# First Layer and Hidden Layer
+ann.add(tf.keras.layers.Dense(units = 6,activation = 'relu'))
+
+# Second Hidden Layer
+ann.add(tf.keras.layers.Dense(units = 6,activation = 'relu'))
+
+# Output Layer
+ann.add(tf.keras.layers.Dense(units = 1,activation = 'sigmoid'))
+
+
 
 
 
