@@ -63,6 +63,11 @@ ann.compile(optimizer ='adam' , loss ='binary_crossentropy' ,metrics=['accuracy'
 # Training the ANN
 ann.fit(X_train,y_train,batch_size=32,epochs = 100)
 
+# Making Predictions and Evaluating the model
+
+# Prdicting the result of a single operation
+ann.predict([])
+
 
 
 
